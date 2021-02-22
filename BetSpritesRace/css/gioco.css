@@ -1,0 +1,35 @@
+/* stile per html generato da php*/
+
+#benvenuto {
+    font-size: 20px;
+    color: #f9ca24;    /*giallone*/
+    position: absolute;
+    float:right;
+    top: 5px;
+    right: 20px;
+}
+
+#Classifica table tr, #Classifica table th {
+    border: 1px solid black;
+    padding: 7px 7px 7px 7px;
+    background-color: #2c2c54; /*blu scuro*/
+    color: #f9ca24;    /*giallone*/
+    font-size: 20px;
+}
+
+#Corridori table tr, #Corridori table th {
+    border: 1px solid black;
+    padding: 7px 7px 7px 7px;
+    background-color: #2c2c54; /*blu scuro*/
+    color: #f9ca24;    /*giallone*/
+    font-size: 20px;
+}
+
+#MioProfilo div {
+    display: block;
+    background-color: #2c2c54; /*blu scuro*/
+    color: #f9ca24;    /*giallone*/
+    font-size: 20px;
+    padding: 7px 7px 7px 7px;
+    margin-bottom: 7px;
+}

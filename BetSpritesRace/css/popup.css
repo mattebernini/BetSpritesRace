@@ -1,0 +1,78 @@
+
+#popup-scommesse{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;    /**/
+    background-color: #f9ca24;    /*giallone*/;
+    color: #130f40;    /* blu piu scuro*/
+    width: 700px;
+    max-width: 80%;
+}
+#popup-scommesse.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: bold;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+
+}
+
+#okBet {
+    cursor: pointer;
+    background-color: #130f40;    /* blu piu scuro*/
+    color: #f9ca24;    /*giallone*/
+    border-radius: 10px;
+    border-color: #f9ca24;    /*giallone*/
+    padding: 10px 10px 10px 10px;
+    float: right;
+    margin-right: 20px;
+}
+
+
+#popup-scommesse input {
+    width: 40px;
+}
+
+#popup-scommesse th, #md{
+    font-size: 20px;
+}
+
+#monetePopup {
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+#popup-scommesse th, td {
+  padding: 5px 10px 5px 10px;
+  text-align: left;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+#overlay.active {
+    opacity: 1;
+    display:inherit;
+}

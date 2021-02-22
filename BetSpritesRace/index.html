@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>BetSpritesRace</title>
+        <link rel="icon" href="./img/logo.ico" />
+
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/popup.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body onload="avvio()">
+        <h1>BetSpritesRace</h1>
+        <header>
+            <ul>
+                <li><a href="#MioProfilo">Mio Profilo</a></li>
+                <li><a href="#Corridori">Corridori</a></li>
+                <li><a href="#Regole">Regole</a></li>
+            </ul>
+            <a id="accedi" href="./html/accedi.html">ACCEDI/ISCRIVITI</a>
+        </header>
+
+        <canvas id="canvas" width="1000" height="500"></canvas>
+
+        <div class="comandi">
+            <button type="button" id="START" onclick="IniziaGara()">START</button> <br>
+            <button type="button" id="BET" onclick="apri_popup_scommesse()">BET</button>
+            <p id="monete">0000</p>
+            <button type="button" id="AGAIN" onclick="refresh()">AGAIN</button>
+        </div>
+
+        <div id="popup-scommesse">
+            <button id="close-button" onclick="chiudi_popup_scommesse()">&times;</button>
+            <table>
+                <tr>
+                    <th colspan="2">Vincitori</th>
+                    <th colspan="2">Accoppiate</th>
+                </tr>
+                <tr>
+                    <td id="quota1"></td>
+                    <td> <input type="number" min="1" max="999" id="bet1"> </td>
+                    <td id="quota1_a"></td>
+                </tr>
+                <tr>
+                    <td id="quota2"></td>
+                    <td> <input type="number" min="1" max="999" id="bet2"> </td>
+                    <td id="quota2_a"></td>
+                </tr>
+                <tr>
+                    <td id="quota3"></td>
+                    <td> <input type="number" min="1" max="999" id="bet3"> </td>
+                    <td id="quota3_a"></td>
+                    <td> <input type="number" min="1" max="999" id="bet3_a"> </td>
+                </tr>
+                <tr>
+                    <td id="quota4"></td>
+                    <td> <input type="number" min="1" max="999" id="bet4"> </td>
+                    <td id="quota4_a"></td>
+                    <td> <input type="number" min="1" max="999" id="bet4_a"> </td>
+                </tr>
+                <tr>
+                    <td id="quota5"></td>
+                    <td> <input type="number" min="1" max="999" id="bet5"> </td>
+                    <td id="quota5_a"></td>
+                    <td> <input type="number" min="1" max="999" id="bet5_a"> </td>
+                </tr>
+                <tr>
+                    <td id="quota6"></td>
+                    <td> <input type="number" min="1" max="999" id="bet6"> </td>
+                    <td id="quota6_a"></td>
+                    <td> <input type="number" min="1" max="999" id="bet6_a"> </td>
+                </tr>
+            </table>
+            <button type="button" id="okBet" onclick="salvaScommesse()">DONE!</button>
+            <p id="md">Monete disponibili:</p> <p id="monetePopup"></p>
+        </div>
+        <div id="overlay"></div>
+
+        <div class="info">
+            <article id="MioProfilo">
+                <h2>Il tuo profilo</h2>
+                <p> Ops... Sembra che tu non abbia un profilo.... <br>
+                    Che cosa aspetti, Registrati cliccando <a href="./html/iscriviti.html">qui</a>.<br>
+                    Se hai un account i tuoi progressi verranno salvati e potrai confrontarti<br>
+                    con gli altri giocatori, che cosa aspetti?</p>
+            </article>
+
+            <article id="Corridori">
+
+            </article>
+
+            <article id="Regole">
+                <h2>Regole del Gioco</h2>
+                <ul>
+                    <li>Premi BET per scommettere sul tuo corridore preferito</li><br>
+                    <li>Le monete vengono incrementate ogni tot tempo, non rimarrai senza nulla da scommettere!</li><br>
+                    <li>Premi START per far partire la corsa</li><br>
+                    <li>A fine corsa ti sarà accreditata la vittoria</li><br>
+                    <li>Premendo AGAIN potrai nuovamente scommettere ed assistere ad un'altra gara</li><br>
+                    <li>Sopra le regole troverai una classifica dei corridori, sulla quale si basano le quote</li><br>
+                    <li>Se non lo hai ancora fatto registarti per salvare i tuoi progressi</li><br>
+                    <li>Se ti sei registrato premi SALVA per salvare il numero di monete che possiedi</li><br>
+                    <li>Registarndoti a questo gioco potrai competere con gli altri scommettitori!</li><br>
+                    <li>In fondo alla pagina dell'utente registarto troverai la classifica di tutti gli utenti</li><br>
+                    <li>Cliccando su "Mio Profilo" troverai un breve recap dei tuoi progressi</li><br>
+                    <li>Adesso sai tutto ciò che devi sapere, non ti resta che giocare, Buon Divertimento!!</li><br>
+                </ul>
+            </article>
+
+            <footer>
+                <p>Gli sprites sono stati ralizzati su questo <a href="https://0x72.itch.io/pixeldudesmaker">sito web</a></p>
+                <p>Questo progetto è stato interamente ideato e realizzato da Matteo Bernini</p>
+            </footer>
+        </div>
+
+        <script src="./js/funzioni_utilita.js"></script>
+        <script src="./js/corridore.js"></script>
+        <script src="./js/gioco.js"></script>
+        <script src="./js/economia.js"></script>
+        <script src="./js/gara.js"></script>
+        <script src="./js/ajax.js"></script>
+        <script src="./js/main.js"></script>
+
+
+    </body>
+</html>

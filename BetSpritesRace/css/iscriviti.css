@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #2c2c54; /*blu scuro*/
+}
+
+.box{
+    border-radius: 30px;
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    background-color: #130f40;    /* blu piu scuro*/
+    text-align: center;
+}
+
+.box h1{
+    color: #f9ca24;    /*giallone*/
+    font-weight: 500;
+}
+
+.box input[type = "text"], .box input[type = "password"],
+.box input[type = "email"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2c2c54; /*blu scuro*/
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus, .box input[type = "password"]:focus,
+.box input[type = "email"]:focus
+{
+    width: 280px;
+    border-color: #f9ca24; /*giallone*/
+}
+
+.box input[type = "submit"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2c2c54; /*blu scuro*/
+    padding: 14px 40px;
+    outline: none;
+    color: #f9ca24; /*giallone*/
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box input[type = "submit"]:hover
+{
+    background-color: #f9ca24; /*giallone*/
+    color: #2c2c54; /*blu scuro*/
+}
+
+.box p, .box a {
+    color: #f9ca24; /*giallone*/
+}
